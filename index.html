@@ -35,12 +35,79 @@
     }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
+  color: var(--text);
 
+  font-family: 'Inter', sans-serif;
+
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.82),
+      rgba(0,0,0,.82)
+    ),
+
+    url('simrig1.jpg') center center / cover fixed no-repeat;
+
+  position: relative;
+}
+    body::before {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.75),
+      rgba(0,0,0,.35)
+    ),
+
+    url('simrig2.jpg') center center / cover no-repeat;
+
+  opacity: .18;
+
+  z-index: -2;
+
+  animation: bgMove 18s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove {
+
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
+
+}
+    section,
+.stats,
+footer,
+nav {
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  background: transparent;
+}
+    .stat-card,
+.feature-item,
+.gallery-item,
+.contact-card,
+.sponsor-card,
+.cta-box {
+  background: rgba(15,15,15,.55);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,.08);
+}
     img {
       max-width: 100%;
       display: block;
