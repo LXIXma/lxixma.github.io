@@ -119,9 +119,14 @@ section {
     }
 
     .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
     nav {
       position: fixed;
@@ -717,6 +722,16 @@ section {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+}
+    @media (min-width: 1600px) {
+
+  .container {
+    max-width: 1800px;
+
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
 }
