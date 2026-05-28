@@ -1005,6 +1005,36 @@ section {
 </div>
       </div>
 </nav>
+<section class="hero-banner">
+  <video class="hero-video active" autoplay muted loop playsinline>
+    <source src="video1.mp4" type="video/mp4" />
+  </video>
+
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="video2.mp4" type="video/mp4" />
+  </video>
+
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="video3.mp4" type="video/mp4" />
+  </video>
+
+
+  
+<script>
+  const videos = document.querySelectorAll(".hero-video");
+  let current = 0;
+
+  function switchVideo() {
+    videos[current].classList.remove("active");
+
+    current = (current + 1) % videos.length;
+
+    videos[current].classList.add("active");
+  }
+
+  // switch every 6 seconds
+  setInterval(switchVideo, 4000);
+</script>
  
   <section class="hero">
     <div class="container hero-content">
@@ -1055,36 +1085,6 @@ section {
 
     </div>
   </div>
-<section class="hero-banner">
-  <video class="hero-video active" autoplay muted loop playsinline>
-    <source src="video1.mp4" type="video/mp4" />
-  </video>
-
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="video2.mp4" type="video/mp4" />
-  </video>
-
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="video3.mp4" type="video/mp4" />
-  </video>
-
-
-  
-<script>
-  const videos = document.querySelectorAll(".hero-video");
-  let current = 0;
-
-  function switchVideo() {
-    videos[current].classList.remove("active");
-
-    current = (current + 1) % videos.length;
-
-    videos[current].classList.add("active");
-  }
-
-  // switch every 6 seconds
-  setInterval(switchVideo, 4000);
-</script>
 
   <section id="about">
     <div class="container">
