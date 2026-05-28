@@ -126,22 +126,19 @@ section {
   padding-right: 40px;
 }
 
-   nav {
-  position: fixed;
+ .nav-links {
+  display: flex;
 
-  top: 0;
-  left: 0;
+  align-items: center;
 
-  width: 100%;
+  gap: 22px;
 
-  z-index: 9999;
+  margin-left: auto;
 
-  backdrop-filter: blur(18px);
-
-  background: rgba(8,8,8,.78);
-
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  margin-right: 20px;
 }
+
+
 
 .nav-inner {
   display: flex;
@@ -167,6 +164,7 @@ section {
 
   gap: 24px;
 }
+    
 
 .nav-links a {
   color: #fff;
@@ -197,27 +195,20 @@ section {
   flex-shrink: 0;
 }
 
-.social-links a {
-  width: 42px;
-  height: 42px;
-
-  min-width: 42px;
-
-  border-radius: 14px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(255,255,255,.05);
-
-  border: 1px solid rgba(255,255,255,.08);
-
-  color: #fff;
-
-  transition: .3s ease;
+    .logo {
+  flex-shrink: 0;
 }
 
+.nav-links,
+.social-links {
+  min-width: fit-content;
+}
+.social-links a {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 12px;
+}
 .social-links a:hover {
   background: var(--accent);
 
