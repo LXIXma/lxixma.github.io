@@ -132,62 +132,102 @@ section {
   top: 0;
   left: 0;
 
-  width: 95%;
+  width: 100%;
 
   z-index: 9999;
 
   backdrop-filter: blur(18px);
 
-  background: rgba(5,5,5,.78);
+  background: rgba(8,8,8,.78);
 
   border-bottom: 1px solid rgba(255,255,255,.06);
+}
 
-  transition: none;
+.nav-inner {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 16px 0;
 }
 
 
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-    }
+/* =========================================
+   NAV LINKS
+========================================= */
 
-    .logo {
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+.nav-links {
+  display: flex;
 
-    .logo span {
-      color: var(--accent);
-    }
+  align-items: center;
 
-    .nav-links {
-      display: flex;
-      gap: 35px;
-    }
+  gap: 24px;
+}
 
 .nav-links a {
-  color: #e4e4e4;
-  font-size: .95rem;
-  transition: .25s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  color: #fff;
 
-.nav-links a svg {
+  font-size: .95rem;
+
   transition: .25s ease;
-  margin-right: 10px;
+
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
   color: var(--accent);
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,.05);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  color: #fff;
+
+  transition: .3s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent);
+
+  color: #000;
+
   transform: translateY(-2px);
 }
 
+
+ 
     . {
       min-height: 100vh;
       position: relative;
@@ -725,6 +765,90 @@ section {
     }
 
     
+@media (max-width: 760px) {
+
+  nav {
+    padding: 0 14px;
+  }
+
+  .nav-inner {
+    gap: 10px;
+
+    padding: 14px 0;
+  }
+
+  .logo {
+    font-size: .85rem;
+
+    letter-spacing: 1px;
+
+    flex-shrink: 1;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: .78rem;
+  }
+
+  .social-links {
+    gap: 6px;
+  }
+
+  .social-links a {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    border-radius: 10px;
+
+    font-size: .85rem;
+  }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+  .nav-inner {
+    gap: 6px;
+  }
+
+  .logo {
+    font-size: .72rem;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    font-size: .72rem;
+  }
+
+  .social-links {
+    gap: 4px;
+  }
+
+  .social-links a {
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+
+    border-radius: 8px;
+
+    font-size: .75rem;
+  }
+
+}
 @media (max-width: 760px) {
 
   body {
